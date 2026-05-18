@@ -1,0 +1,57 @@
+model,title,author,year,criteria_1,criteria_2,criteria_3,criteria_4,criteria_5
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment as development and decision support tool for wastewater resource recovery technology,Fang,2016,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Techno-economic and carbon footprint assessment of methyl crotonate and methyl acrylate production from wastewater-based polyhydroxybutyrate (PHB),Fernández-Dacosta,2016,Y,Y,N,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Microalgae biomass production using wastewater: Treatment and costs: Scale-up considerations,Gouveia,2016,Y,N,N,N,Y
+Qwen/Qwen2.5-7B-Instruct,A circular economy strategy for valorizing industrial saline wastewaters: Techno-economics and environmental impacts,Roibás-Rozas,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Environmental impacts of phosphorus recovery from municipal wastewater,Amann,2018,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Pressure-driven membrane nutrient preconcentration for down-stream electrochemical struvite recovery,Anari,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,An environmental and economic assessment of bioplastic from urban biowaste. The example of polyhydroxyalkanoate,Andreasi Bassi,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Benchmarking sidestream shortcut nitrogen removal processes against nitrous oxide recovery from a life cycle perspective,Zhou,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,"Environmental assessment of urine, black and grey water separation for resource recovery in a new district compared to centralized wastewater resources recovery plant",Besson,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Bioextractive aquaculture as an alternative nutrient management strategy for water resource recovery facilities,Wu,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Evaluation of new alternatives in wastewater treatment plants based on dynamic modelling and life cycle assessment (DM-LCA),Bisinella de Faria,2015,Y,Y,Y,N,Y
+Qwen/Qwen2.5-7B-Instruct,Integrating dairy manure for enhanced resource recovery at a WRRF: Environmental life cycle and pilot-scale analyses,Bryant,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Assessment of Struvite as an Alternative Sources of Fertilizer-Phosphorus for Flood-Irrigated Rice,Brye,2022,Y,Y,N,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Hybrid life cycle assessment of agro-industrial wastewater valorisation,Chen,2020,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Control structure design for resource recovery using the enhanced biological phosphorus removal and recovery (EBP2R) activated sludge process,Valverde-Pérez,2016,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Developing the nitrogen handprint approach to quantify the positive impacts of industrial symbiosis on nitrogen cycles,Lakanen,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Enhanced biomethane production with a low carbon footprint via anaerobic co-digestion of swine wastewater with rice husk,Lin,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,From wastewater treatment to water resource recovery: Environmental and economic impacts of full-scale implementation,Farago,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Microbial community-based polyhydroxyalkanoates (PHAs) production from wastewater: Techno-economic analysis and ex-ante environmental assessment,Fernández-Dacosta,2015,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,"Graphene and biochar-based cathode catalysts for microbial fuel cell: Performance evaluation, economic comparison, environmental and future perspectives",Dhanda,2023,Y,Y,N,Y,N
+Qwen/Qwen2.5-7B-Instruct,"Phosphorus recovery and iron, copper precipitation from swine wastewater via struvite crystallization using various magnesium compounds",Guan,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life Cycle Assessment of Urine Diversion and Conversion to Fertilizer Products at the City Scale,Hilton,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Incorporation of main line impact into life cycle assessment of nutrient recovery from reject water using novel membrane contactor technology,Högstrand,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Simultaneous recovery of nutrients and improving the biodegradability of waste algae hydrothermal liquid,Hu,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Assessment of environmental impacts and operational costs of the implementation of an innovative source-separated urine treatment,Igos,2017,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Is SCENA a good approach for side-stream integrated treatment from an environmental and economic point of view?,Longo,2017,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle comparison of centralized wastewater treatment and urine source separation with struvite precipitation: Focus on urine nutrient management,Ishii,2015,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment and techno-economic analysis of nitrogen recovery by ammonia air-stripping from wastewater treatment,Kar,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life Cycle Environmental Impacts of Wastewater-Derived Phosphorus Products: An Agricultural End-User Perspective,Lam,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment of management/valorisation practices for metal-sludge from treatment of acid mine drainage,Moreno-González,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment of phosphorus alternatives for Swedish agriculture,Linderholm,2012,Y,Y,N,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Environmental sustainability of municipal wastewater treatment through struvite precipitation: Influence of operational parameters,Mavhungu,2021,Y,Y,N,N,Y
+Qwen/Qwen2.5-7B-Instruct,Life-cycle assessment and techno-economic evaluation of the value chain in nutrient recovery from wastewater treatment plants for agricultural application,Mayor,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Techno-environmental assessment of integrating polyhydroxyalkanoate (PHA) production with services of municipal wastewater treatment,Morgan-Sagastume,2016,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Prospective Life Cycle Assessment and Cost Analysis of Novel Electrochemical Struvite Recovery in a U.S. Wastewater Treatment Plant,Morrissey,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Environmental impacts of phosphorus recovery from a “product” Life Cycle Assessment perspective: Allocating burdens of wastewater treatment in the production of sludge-based phosphate fertilizers,Pradel,2019,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Upgrading a large and centralised municipal wastewater treatment plant with sequencing batch reactor technology for integrated nutrient removal and phosphorus recovery: Environmental and economic life cycle performance,Rashid,2020,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment of struvite recovery and wastewater sludge end-use: A Flemish illustration,Ravi,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment of nutrient removal technologies for the treatment of anaerobic digestion supernatant and its integration in a wastewater treatment plant,Rodriguez-Garcia,2014,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Environmental assessment of complex wastewater valorisation by polyhydroxyalkanoates production,Roibás-Rozas,2020,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment and economic analysis of bioplastics production from cyanobacteria,Rueda,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Can wastewater feed cities? Determining the feasibility and environmental burdens of struvite recovery and reuse for urban regions,Rufí-Salís,2020,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Increasing resource circularity in wastewater treatment: Environmental implications of technological upgrades,Rufí-Salís,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Environmental Performance of Nitrogen Recovery from Reject Water of Sewage Sludge Treatment Based on Life Cycle Assessment,Saud,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Environmental impacts of phosphorus recovery through struvite precipitation in wastewater treatment,Sena,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Spatial-temporal economic analysis of modern sustainable sanitation in rural China: Resource-oriented system,Xu,2019,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life Cycle Assessment of Struvite Precipitation from Anaerobically Digested Dairy Manure: A Wisconsin Perspective,Temizel-Sekeryan,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Using chlorella vulgaris for nutrient removal from hydroponic wastewater: experimental investigation and economic assessment,Yousif,2022,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Environmental and economic evaluation of implementing membrane technologies and struvite crystallisation to recover nutrients from anaerobic digestion supernatant,Vinardell,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment of electrodialysis for sidestream nitrogen recovery in municipal wastewater treatment,Vineyard,2021,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Life Cycle Assessment and Energy Balance of a Novel Polyhydroxyalkanoates Production Process with Mixed Microbial Cultures Fed on Pyrolytic Products of Wastewater Treatment Sludge,Vogli,2020,Y,Y,N,Y,N
+Qwen/Qwen2.5-7B-Instruct,Co-Processing Agricultural Residues and Wet Organic Waste Can Produce Lower-Cost Carbon-Negative Fuels and Bioplastics,Wang,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,"Life Cycle, PESTLE and Multi-Criteria Decision Analysis of Membrane Contactor-Based Nitrogen Recovery Process",Nagy,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Exploring the environmental and economic potential for biogas production from swine manure wastewater by life cycle assessment,Shih,2023,Y,Y,Y,Y,Y
+Qwen/Qwen2.5-7B-Instruct,Plant-wide modeling of a metropolitan wastewater treatment plant to reduce energy consumption and carbon footprint,Okan,2023,Y,Y,Y,Y,N
+Qwen/Qwen2.5-7B-Instruct,Life cycle assessment of side stream removal and recovery of nitrogen from wastewater treatment plants,van Zelm,2020,Y,Y,Y,Y,Y

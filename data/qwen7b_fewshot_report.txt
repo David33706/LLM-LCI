@@ -1,0 +1,32 @@
+Qwen2.5-7B Few-Shot Classification Report
+========================================================
+Generated: 2026-03-29 13:16:27
+Dataset: data/uselca1.csv
+Model: Qwen/Qwen2.5-7B-Instruct
+Evaluation source: full dataset
+Split seed: 42
+Few-shot seeds: [42, 52, 62]
+Few-shot examples per class: 4
+Few-shot total examples per run: 8
+Evaluation rows by seed after removing few-shot examples: {42: 492, 52: 492, 62: 492}
+Sensitivity: bootstrap std over 300 resamples (seed=42)
+
+Per-run Summary
+--------------------------------------------------------
+Seed   Mode         Status     Coverage      Acc     Prec      Rec       F1  Acc_std   F1_std
+---------------------------------------------------------------------------------------------
+42     no_quant     ok           1.0000   0.8760   0.9617   0.8717   0.9144   0.0145   0.0107
+52     no_quant     ok           1.0000   0.8415   0.9774   0.8102   0.8860   0.0173   0.0134
+62     no_quant     ok           1.0000   0.8679   0.9668   0.8556   0.9078   0.0158   0.0118
+
+Aggregate Summary By Mode
+--------------------------------------------------------
+Mode          Runs   Acc_mean    Acc_std    F1_mean     F1_std
+--------------------------------------------------------------
+no_quant         3     0.8618     0.0148     0.9027     0.0122
+
+Notes
+- Few-shot examples were removed from evaluation rows for each seed run.
+- Per-seed few-shot examples are saved to separate CSV files in the data folder.
+- Coverage is the fraction of rows with both ground-truth label and valid prediction.
+- Std metrics come from bootstrap resampling and quantify sensitivity.

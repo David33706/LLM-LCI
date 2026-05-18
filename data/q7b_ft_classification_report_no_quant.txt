@@ -1,0 +1,28 @@
+Fine-Tuned Qwen2.5-7B LCA Classification Report
+========================================================
+Generated: 2026-03-28 06:01:28
+Dataset: data/uselca1.csv
+Fine-tuned model: /work/lamlab/nt140/qwen_lca_full/final_model
+Quantization mode: no_quant
+Rows: 500
+Sensitivity: bootstrap std over 300 resamples (seed=42)
+
+Summary
+--------------------------------------------------------
+Status:    ok
+Coverage:  1.0000
+Accuracy:  0.9620
+Precision: 0.9945
+Recall:    0.9550
+F1:        0.9744
+
+Sensitivity (Std)
+--------------------------------------------------------
+Accuracy_std:  0.0089
+Precision_std: 0.0040
+Recall_std:    0.0106
+F1_std:        0.0060
+
+Notes
+- Coverage is the fraction of rows with both ground-truth label and valid model prediction.
+- Std metrics come from bootstrap resampling and quantify sensitivity to dataset perturbation.

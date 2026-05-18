@@ -1,0 +1,29 @@
+Zero-Shot LCA Classification Benchmark Report
+========================================================
+Generated: 2026-04-03 11:50:19
+Dataset: data/uselca1.csv
+Quantization mode: full_precision
+Rows: 500
+Models attempted: 3
+Sensitivity: bootstrap std over 300 resamples (seed=42)
+
+Per-model summary
+--------------------------------------------------------
+Model                                Status                 Coverage      Acc     Prec      Rec       F1    Valid/Total
+-----------------------------------------------------------------------------------------------------------------------
+google/gemma-4-26B-A4B-it            ok                       1.0000   0.9260   0.9148   0.9947   0.9531        500/500
+Qwen/Qwen2.5-7B-Instruct             ok                       1.0000   0.9320   0.9410   0.9709   0.9557        500/500
+google/gemma-3-12b-it                ok                       1.0000   0.8800   0.8630   1.0000   0.9265        500/500
+
+Metric Std (Sensitivity)
+--------------------------------------------------------
+Model                                   Acc_std   Prec_std    Rec_std     F1_std
+--------------------------------------------------------------------------------
+google/gemma-4-26B-A4B-it                0.0119     0.0137     0.0037     0.0077
+Qwen/Qwen2.5-7B-Instruct                 0.0112     0.0115     0.0084     0.0075
+google/gemma-3-12b-it                    0.0136     0.0153     0.0000     0.0088
+
+Notes
+- Coverage is the fraction of rows with both ground-truth label and valid model prediction.
+- Std metrics come from bootstrap resampling and quantify sensitivity to dataset perturbation.
+- Predictions are saved in data/uselca_with_predictions1_full_precision.csv.

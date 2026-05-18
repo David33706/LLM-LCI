@@ -1,0 +1,36 @@
+Zero-Shot LCA Classification Benchmark Report
+========================================================
+Generated: 2026-03-27 15:37:39
+Dataset: data/uselca1.csv
+Rows: 500
+Models attempted: 7
+Sensitivity: bootstrap std over 300 resamples (seed=42)
+
+Per-model summary
+--------------------------------------------------------
+Model                                Status                 Coverage      Acc     Prec      Rec       F1    Valid/Total
+-----------------------------------------------------------------------------------------------------------------------
+google/gemma-3-1b-it                 ok                       1.0000   0.7660   0.7658   0.9947   0.8654        500/500
+google/gemma-3-4b-it                 ok                       1.0000   0.8080   0.7987   0.9974   0.8871        500/500
+google/gemma-3-12b-it                ok                       1.0000   0.8780   0.8627   0.9974   0.9252        500/500
+meta-llama/Llama-3.2-3B-Instruct     ok                       1.0000   0.7640   0.7621   1.0000   0.8650        500/500
+meta-llama/Llama-3.1-8B-Instruct     ok                       1.0000   0.9100   0.9071   0.9815   0.9428        500/500
+Qwen/Qwen2.5-7B-Instruct             ok                       1.0000   0.9360   0.9413   0.9762   0.9584        500/500
+Qwen/Qwen2.5-3B-Instruct             ok                       1.0000   0.9180   0.9469   0.9444   0.9457        500/500
+
+Metric Std (Sensitivity)
+--------------------------------------------------------
+Model                                   Acc_std   Prec_std    Rec_std     F1_std
+--------------------------------------------------------------------------------
+google/gemma-3-1b-it                     0.0183     0.0185     0.0037     0.0120
+google/gemma-3-4b-it                     0.0170     0.0179     0.0025     0.0110
+google/gemma-3-12b-it                    0.0138     0.0154     0.0026     0.0090
+meta-llama/Llama-3.2-3B-Instruct         0.0185     0.0187     0.0000     0.0120
+meta-llama/Llama-3.1-8B-Instruct         0.0130     0.0145     0.0066     0.0086
+Qwen/Qwen2.5-7B-Instruct                 0.0108     0.0115     0.0075     0.0072
+Qwen/Qwen2.5-3B-Instruct                 0.0120     0.0114     0.0111     0.0083
+
+Notes
+- Coverage is the fraction of rows with both ground-truth label and valid model prediction.
+- Std metrics come from bootstrap resampling and quantify sensitivity to dataset perturbation.
+- Predictions are saved in data/uselca_with_predictions.csv.

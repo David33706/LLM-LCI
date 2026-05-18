@@ -1,0 +1,7 @@
+# ignore ipynb, .vscode folder, cache folder, pdf files
+*.ipynb
+.vscode/
+*.pdf
+__pycache__/
+
+

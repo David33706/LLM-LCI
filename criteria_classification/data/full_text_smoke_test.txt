@@ -1,0 +1,920 @@
+Model: Qwen/Qwen2.5-7B-Instruct
+PDF: 1-s2.0-S0043135415302827-main.pdf
+Title: Life cycle assessment as development and decision support tool for wastewater resource recovery technology
+
+Prompt:
+<|im_start|>system
+You are a senior environmental science researcher assessing literature for a meta-analysis.
+Determine if the provided academic paper meets ANY of the following relevance criteria:
+- Assessing the environmental impacts of a resource recovery process, or
+- Comparing the environmental impacts of different resource recovery processes, or
+- Comparing the environmental impacts before and after introducing resource recovery, or
+- Assessing the environmental impacts of using recovered products, or
+- Assessing the environmental impacts of resource recovery with wastewater source separation, or
+
+Output exactly ONLY one letter, no reasoning only if specifically asked, keep reasoning short:
+- Y = Yes, it meets at least one criterion
+- N = No, it does not meet any criteria<|im_end|>
+<|im_start|>user
+Title: Life cycle assessment as development and decision support tool for wastewater resource recovery technology
+
+Full Text Extract:
+Life cycle assessment as development and decision support tool for
+wastewater resource recovery technology
+Linda L. Fang**, Borja Valverde-Perez, Anders Damgaard, Benedek Gy. Plosz*,
+Martin Rygaard
+Department of Environmental Engineering, Technical University of Denmark, Milj vej, Building 113, 2800 Kgs, Lyngby, Denmark
+a r t i c l e
+i n f o
+Article history:
+Received 13 May 2015
+Received in revised form
+18 September 2015
+Accepted 12 October 2015
+Available online 22 October 2015
+Keywords:
+Resource recovery
+Life cycle assessment
+Technology development
+Wastewater treatment
+Enhanced biological phosphorus removal
+Algal cultivation
+a b s t r a c t
+Life cycle assessment (LCA) has been increasingly used in the eld of wastewater treatment where the
+focus has been to identify environmental trade-offs of current technologies. In a novel approach, we use
+LCA to support early stage research and development of a biochemical system for wastewater resource
+recovery. The freshwater and nutrient content of wastewater are recognized as potential valuable re-
+sources that can be recovered for bene cial reuse. Both recovery and reuse are intended to address
+existing environmental concerns, for example, water scarcity and use of non-renewable phosphorus.
+However, the resource recovery may come at the cost of unintended environmental impacts. One
+promising recovery system, referred to as TRENS, consists of an enhanced biological phosphorus removal
+and recovery system (EBP2R) connected to a photobioreactor. Based on a simulation of a full-scale
+nutrient and water recovery system in its potential operating environment, we assess the potential
+environmental impacts of such a system using the EASETECH model. In the simulation, recovered water
+and nutrients are used in scenarios of agricultural irrigation-fertilization and aquifer recharge. In these
+scenarios, TRENS reduces global warming up to 15% and marine eutrophication impacts up to 9%
+compared to conventional treatment. This is due to the recovery and reuse of nutrient resources, pri-
+marily nitrogen. The key environmental concerns obtained through the LCA are linked to increased
+human toxicity impacts from the chosen end use of wastewater recovery products. The toxicity impacts
+are from both heavy metals release associated with land application of recovered nutrients and pro-
+duction of AlCl3, which is required for advanced wastewater treatment prior to aquifer recharge.
+Perturbation analysis of the LCA pinpointed nutrient substitution and heavy metals content of algae
+biofertilizer as critical areas for further research if the performance of nutrient recovery systems such as
+TRENS is to be better characterized. Our study provides valuable feedback to the TRENS developers and
+identi es the importance of system expansion to include impacts outside the immediate nutrient re-
+covery system itself. The study also show for the rst time the successful evaluation of urban-to-
+agricultural water systems in EASETECH.
+ 2015 Published by Elsevier Ltd.
+1. Introduction
+Sustainability in the urban water cycle is increasingly at the
+forefront of discussions on new treatment technologies due
+changes in climate, population, and regulation (Guest et al., 2009).
+Wastewater resource recovery and reuse is one area where
+technology is responding to the need for pollution prevention and
+resource ef ciency. Wastewater (also referred to as used water e
+Verstraete et al., 2009) technology development has traditionally
+been compliance-driven, designed to meet safety and discharge
+regulations. During conventional treatment, nutrients e notably
+nitrogen and phosphorus e are biologically and physicalechemi-
+cally converted and removed from the water. Increasingly, the
+freshwater and nutrient content of wastewater are recognized as
+resources that can be recovered to address existing environmental
+concerns (e.g. water scarcity, use of non-renewable phosphorus)
+(Guest et al., 2009). However, resource recovery may come at the
+cost of increased treatment intensity and there is a need to assess
+* Corresponding author.
+** Corresponding author.
+E-mail
+addresses:
+linda.fang@mail.mcgill.ca
+(L.L.
+Fang),
+beep@env.dtu.dk
+(B.Gy. Plosz).
+Contents lists available at ScienceDirect
+Water Research
+journal homepage: www.elsevier.com/locate/watres
+http://dx.doi.org/10.1016/j.watres.2015.10.016
+0043-1354/ 2015 Published by Elsevier Ltd.
+Water Research 88 (2016) 538e549
+
+treatment systems from a holistic systems perspective so that the
+quest for sustainability in the water cycle does not overshadow
+other environmental concerns (Mo and Zhang, 2013; Batstone et al.,
+2014).
+TRENS is a wastewater resources recovery technology currently
+under development (Valverde-Perez et al., 2015b), which combines
+an enhanced biological phosphorous removal and recovery (EBP2R)
+system (Valverde-Perez et al., 2015) with a downstream photo-
+bioreactor (PBR) to cultivate green microalgae under optimal
+growth conditions. The system recovers both water and nutrient
+resources from wastewater, with the nutrients being taken up and
+encapsulated by the algal biomass. This water and algae suspension
+can then be used together (for combined irrigation and fertilization,
+otherwise referred to as fertigation) or individually if the algae are
+harvested through solideliquid separation. The coupled system is a
+completely biological process that is less chemical and energy
+intensive
+than
+conventional
+physicalechemical
+phosphorus
+removal processes e e.g. struvite precipitation, ultra ltration
+(Valverde-Perez et al., 2015), thereby reducing the water and en-
+ergy demand of traditional algae cultivation (Clarens et al., 2010).
+In recent years, Life Cycle Assessment (LCA) has been used in
+environmental assessment of urban water systems (Loubet et al.,
+2014), including wastewater speci c studies (Corominas et al.,
+2013; Zang et al., 2015). Moreover, LCA has been used in under-
+standing environmental trade-offs in optimizing speci c treatment
+technologies such as ozonation (Rodr guez et al., 2012). Recent
+wastewater related LCA studies for technology development
+include coupled wastewater treatment for microalgae biofuel
+production (Rothermel et al., 2013) and nutrient removal and re-
+covery from anaerobic digestion supernatant (Rodriguez-Garcia
+et al., 2014). Both of these studies report the need to expand the
+system boundaries to include the wastewater treatment plant
+(WWTP) when evaluating wastewater technologies and emphasize
+the need to consider options at a plant level rather than at a unit
+process level. One of the challenges of LCA is delineating the system
+boundary since they vary widely, with some studies limited to the
+WWTP and others encompassing the entire urban water system
+(Corominas et al., 2013; Zang et al., 2015). The environmental
+performance of WWTPs is largely dependent on ef uent discharge
+and sludge application on land (Hospido et al., 2004, 2012; Foley
+et al., 2010), although plant performance can be affected by
+in uent composition, plant size, and local climate (Lorenzo-Toja
+et al., 2015). Furthermore, the sludge and solids stream of waste-
+water treatment accumulates bene cial and problematic com-
+pounds (e.g. phosphorus and heavy metals) that need to be
+included in LCA (Yoshida et al., 2013). Therefore, any environmental
+assessment of a novel wastewater technology needs to include life
+cycle boundaries that encompass the end use of water and
+nutrients.
+This is the rst study related to LCA-supported technology
+development that accounts not only for the WWTP, but also the
+larger system, which includes the urban-rural water connection
+and end-use of recovered water and nutrients. This broader system
+boundary is particularly necessary in view of the development
+objectives of TRENS, which is to provide an ef cient resource re-
+covery technology. An LCA carried out in the early development
+phase of TRENS provides a diagnostic opportunity: a chance to
+identify environmental impacts that may be roadblocks to devel-
+oping and marketing a sustainability-focused technology. More-
+over, the LCA results become documentation for sustainability that
+can iteratively follow TRENS throughout its development, optimi-
+zation, and ultimately implementation.
+The study objectives are (1) to demonstrate the use of LCA in the
+early research and development phase of a new wastewater pro-
+cess by quantifying its environmental performance using accepted
+impact categories; (2) to provide a rst assessment of the envi-
+ronmental impacts of the TRENS system and (3) to use LCA results
+to provide feedback for additional research by identifying further
+areas of interest and data needs. The TRENS performance is
+assessed in three scenarios based on the Lynetten WWTP in
+Copenhagen. The scenarios were chosen to ensure an evaluation
+that captures the necessary infrastructure additions, operational
+changes, and reuse options.
+2. Materials and methods
+2.1. Framing a context for water and nutrient recovery
+Copenhagen and its surrounding municipalities are supplied
+entirely by groundwater. HOFOR, the local water utility, supplies
+approximately 50 million m3 annually to 1 million residents in the
+area. A high percentage of Danish households (>85%) are connected
+to the sewers, meaning a large portion of the distributed water
+resource can be recaptured (Hochstrat et al., 2005). The Lynetten
+WWTP serves a catchment area of 76 km2 of the central and
+NortheEast sections of Copenhagen (Flores-Alsina et al., 2014) and
+treated 59.3 million m3 in 2012 (Lynettef llesskabet I/S). In the
+existing Lynetten WWTP, the ef uent is discharged and mixed into
+the sea water of resund. Through the treatment process, nitrogen
+resources in the wastewater are converted to free nitrogen gas and
+lost to the atmosphere, while phosphorus is lost to the sludge and
+subsequently incinerated. In the WWTP, excess phosphorus that is
+not taken up in the biologically process is removed through
+chemical precipitation using iron (III) chloride (FeCl3).
+The groundwater resource surrounding Copenhagen is over-
+exploited due to abstraction for drinking water. Henriksen et al.
+(2008) reported an estimated de cit of 77 million m3/year for the
+Northern-Zealand area, which encompasses Copenhagen. Howev-
+er, the re nement in spatial resolution can change results of water
+stress evaluations by 10e53% (Hybel et al., 2015). In this context,
+wastewater reuse presents a valid opportunity to ameliorate the
+local groundwater resource de cit related to the Northern-Zealand
+area. In particular, there is an opportunity to collect water from the
+high-use urban area and return it to the rural groundwater
+abstraction areas.
+Regulatory standards of treated wastewater reuse for irrigation
+or aquifer recharge are not speci cally addressed by existing Eu-
+ropean Union (EU) policies, although there is an on-going effort to
+identify appropriate policies and encourage reuse (EC, 2012).
+Treated wastewater is most commonly reused for non-potable
+purposes such as irrigation of non-food crops or crops requiring
+further processing (Bixio et al., 2006). This restricted use is due
+partly to the public's perceived risks from wastewater and partly to
+the lack of formal regulatory frameworks (Bixio et al., 2005; Chen
+et al., 2012). The implications of water quality, and therefore
+treatment needs, for scenario design is presented in Section 2.3.
+2.2. TRENS process addition to existing WWTP
+The TRENS system was included in this study as a side-stream
+process, where a portion of the in uent wastewater at the Lynet-
+ten WWTP was diverted, while the remainder passed through
+existing conventional treatment (Fig. 1). The new side-stream sys-
+tem was designed to treat 10% of WWTP in uent ow, which is
+approximately 5.9 million m3/yr or 16,247 m3/d. This ow rate is in
+excess of the reported local agricultural demands for irrigation
+water (2.1 and 0.93 million m3/yr for Zealand and the Capital Re-
+gion, respectively, covering 2561 km2 in total). However, it is
+possible that irrigation values are underestimated since the total is
+based on self-reported water use from only 22% of the farms
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+539
+
+surveyed, in addition to inferred values from the non-responders
+(EC, 2010). It was also assumed that crop selection and irrigation
+practices may increase to take advantage of the available supply of
+reuse water. The TRENS system was designed to produce a nitrogen
+to phosphorus ratio (N-to-P ratio) of 16 optimal for microalgae
+cultivation in the PBR (Valverde-Perez et al., 2015b). The nutrient
+concentration in the TRENS water is 47 mg/L N and 6.5 mg/L P,
+thereby recovering 9 and 8% respectively of the nitrogen and
+phosphorus load to the Lynetten WWTP.
+2.3. Scenario construction
+Although many reuse options exist for reclaimed water (i.e.
+reuse in urban cleaning, industrial applications, control of salt
+water intrusion), this study focuses on two reuse scenarios that
+were considered most applicable to the TRENS system and the
+Danish context (Table 1). First, agriculture is the second largest
+water use sector after urban use and would therefore be a logical
+recipient of TRENS ef uent which contains both nutrients and
+water. Second, as groundwater is the main freshwater supply in
+Denmark, aquifer recharge is an obvious method to augment
+freshwater sources. In addition, both agricultural irrigation and
+aquifer recharge are common and well-documented options for
+wastewater reuse (Bixio et al., 2006; EEA, 2010). Although the two
+scenarios are modeled separately in this study, it is possible to
+consider them as complementary where fertigation and aquifer
+recharge could be used at the same time with various ow ratios or
+individually at different times of the year. These use combinations
+were not modeled in order to minimize the scenario complexity.
+Additionally, the two scenarios represent two extreme cases for
+nutrient reuse, one where the nutrients are recovered continuously
+and the other where no nutrients are recovered.
+For the agricultural fertigation scenario it is assumed that the
+nutrients and water must be used together. If TRENS is used to
+supply a crop with 300 mm/year of irrigation water, the average
+nutrient load would be approximately 140 kg/ha for N and 20 kg/ha
+for P, similar to the nutrient needs for common Danish crops such
+as winter wheat (Olesen et al., 2009). Since the water and nutrients
+are used together, either the water demand or the nutrient demand
+will be met rst depending on numerous factors such as crop type,
+farming practices, and local climate. In reality, fertilizer and water
+requirements may have large variations seasonally and across crop
+types and this complexity is not captured in the scenario. This
+scenario makes a simplifying assumption that fertilizer and water
+needs are constant throughout the year and TRENS operation
+continues uninterrupted. In this scenario, TRENS water is not
+further treated for pathogen removal since irrigation is not targeted
+at any speci c crop and the potential need for further treatment
+would vary by crop (e.g. less strict for biofuel production than for
+tomato production).
+In the aquifer recharge scenario, the microalgae component is
+separated out and ultimately incinerated. Although the nutrients
+are an integral portion of the TRENS system, the intention of this
+scenario is to explore the water recovery and reuse aspect inde-
+pendent of the nutrients. Excluding nutrient recovery also results in
+a more conservative outcome since there are no environmental
+bene ts from nutrient reuse. Due to the lack of EU-speci c policies
+on water quality for aquifer recharge, the technology-based Cali-
+fornian Title 22 regulation was used to de ne additional treatment
+processes
+including:
+coagulation/ occulation,
+sedimentation,
+ ltration, and UV disinfection (Bixio et al., 2006).
+From a TRENS perspective, the aquifer recharge scenario is
+possibly the least optimal way to operate the system since the
+nutrients are not utilized. Together with fertigation, which is
+Fig. 1. Flow diagram of the TRENS system (EBP2R and downstream PBR) implemented as sidestream process to the existing Lynetten WWTP. Figure created from TRENS (Valverde-
+Perez et al., 2014, 2015) and Lynetten process ow diagrams (Lynettef llesskabet I/S, 2012). Solid lines show ow of water, dotted lines show sludge or solids ow.
+Table 1
+Operational scenarios for TRENS implementation in Copenhagen.
+A. Status quo
+Scenario of existing conventional system in Copenhagen, where wastewater is collected and treated at a centralized WWTP for organic carbon and
+nutrient (N and P) removal.
+B. Agricultural
+fertigation
+Scenario directly utilizes the TRENS system outputs (algal suspension) for fertigation. This scenario involves diverting 10% of the in uent WWTP to
+the TRENS system and requires additional infrastructure and energy consumption. The remaining 90% of the WWTP in uent is treated in the
+conventional system. Modi ed WWTP experiences increased sludge and biogas production due to lower solids retention time (SRT) in the EBP2R
+system. Following the TRENS process, the water is pumped to the end user through a 25 km pipeline. There is no treatment downstream of the PBR
+prior to use in fertigation. The nutrients contained in the algae acts as a substitute for synthetic fertilizer.
+C. Aquifer recharge
+Scenario requires the same modi cations to the WWTP as in the agricultural reuse application. Algal suspension downstream of the PBR is sent to
+tertiary treatment to separate the microalgae and water, so that the water goes on to aquifer recharge basins and the algae biomass is sent to the
+WWTP for dewatering, drying, and incineration.
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+540
+
+possibly the most optimal way TRENS can be operated, these two
+scenarios form the operational envelope for a potential TRENS
+system. Neither scenario is completely realistic, but gives a
+simpli ed view of possibilities.
+2.4. LCA methodology
+The LCA is performed using EASETECH (DTU, Denmark), a model
+that allows handling of heterogeneous materials and tracking of
+ ows at the substance level essential for evaluation of environ-
+mental technologies (Clavreul et al., 2014). Although initially
+developed for waste management systems, EASETECH's ability to
+handle mass and individual substance ows allows for detailed
+modeling of wastewater treatment systems (Yoshida et al., 2014a).
+The study follows the four-phased, iterative approach de ned by
+ISO (2006) consisting of (1) goal and scope de nition, (2) inventory
+analysis, (3) impact assessment, and (4) results interpretation.
+2.4.1. LCA e goal and scope
+The goal of the LCA is to quantify the environmental impacts of
+wastewater resource recovery and reuse in agricultural crops pro-
+duction and in aquifer recharge associated with the operation of
+Lynetten WWTP, located southeast of Copenhagen, Denmark. To
+that end, the boundaries of this study are de ned as starting from
+the in uent of the WWTP, and extend to cover the WWTP itself, the
+TRENS side-stream process, transportation of the treated water in a
+pressurized pipeline, and nal end use (including any additional
+advanced treatment required). Construction and operating phases
+are included in the scope. However, end-of-life phases for the
+WWTP and TRENS system are not included. Studies related to
+WWTPs (Foley et al., 2010) and water reuse (Ortiz et al., 2007;
+Tangsubkul et al., 2005) have reported that end-of-life phases
+contribute relatively little to overall impacts compared to the
+construction and operation phases. Within the operating phase,
+both direct emissions (e.g. gas and treated water ef uent) and in-
+direct emissions (e.g. derived from production of chemicals and
+power generation) are included. The functional unit is de ned as
+1 m3 of in uent wastewater with the same composition as reported
+by Lynettef llesskabet I/S (2012), as the primary function of the
+WWTP system e with or without TRENS sidestream e is to main-
+tain public health and environmental water quality, with fertiga-
+tion and aquifer recharge as secondary bene ts.
+2.4.2. Life cycle inventory
+Life cycling inventory (LCI) data was collected from operating
+reports for existing processes, databases, and model results. Back-
+ground inventory data was obtained through the Ecoinvent LCA
+database that contains unit process data valid mainly for Swiss and
+European markets (Frischknecht et al., 2005). Where TRENS water
+is used for crop irrigation, the nutrients N and P contained in the
+microalgae are assumed to offset mineral fertilizer application and
+production. In this study, both N and P substitutability is assumed
+as 100% based on algae fertilizer performance on seedlings as re-
+ported in Mulbry et al. (2005). It is further assumed that microalgal
+fertilizer would result in zero runoff and leaching, and would
+perform similarly to mineral fertilizer in terms of ammonia vola-
+tilization, and soil mineralization. This assumption is analyzed in
+section 3.2.6 as it is known to be an oversimpli cation from other
+applications of biomass to land (Yoshida et al., 2014c). Although
+promising, the use of algae as fertilizer is still under investigation,
+as the in uence of algae harvesting and application methods on
+fertilizer stability, availability, and performance is poorly docu-
+mented in literature (Shilton et al., 2012). Additionally, the substi-
+tution of organic mineral fertilizer depends on factors such as soil
+property and application technique (Lundin et al., 2000).
+An analysis was made regarding nutrient leaching from algae
+fertilizer on environmental performance by increasing leaching of
+applied nutrient N and P to groundwater in the model from 0 to
+10%. This study initially assumed an optimal PBR operation where
+all the nutrients would be encapsulated in algae biomass. Thus, the
+model was run with zero nutrient leaching to groundwater. This
+meant, there was no adverse environmental impact and this pro-
+cess could not be identi ed during contribution analysis. However,
+this process is important to investigate because one of the key
+bene ts of algae fertilizer is its expected reduction of nutrient
+mobility. The leaching could occur if the nutrients sent to the PBR
+were not completely taken up by the algae and some remained in
+the water phase when it is sent to the irrigation systems.
+Electricity production was based on consumption of Danish
+speci c electricity mix, which is predominantly fossil-based and
+uses coal (46.6%), natural gas (24.4%), wind (12.4%) and heavy fuel
+oil (10.2%) as the main sources (EC-JRC, 2002).
+2.4.3. Impact assessment
+This study uses the LCIA method recommended by the Inter-
+national Reference Life Cycle Data System (ILCD) (EC-JRC, 2010),
+commonly referred to as ILCD 2011. This method was selected as it
+consists of fourteen impact categories based on existing best
+practice. Human toxicity related impacts were assessed using
+USETox, which is included in ILCD 2011 as best-of-the- eld.
+Nevertheless, USETox results, particularly for metals, should be
+interpreted with caution since there are still many uncertainties
+related to the characterization factors (e.g. degradation rate,
+exposure routes). Results are normalized using normalization fac-
+tors from Blok et al. (2013) and presented in milli-person equiva-
+lents (mPE), where 1 mPE represents one thousandths of an
+average European person's annual impact.
+2.4.4. Contribution and perturbation analysis
+The approach recommended by Clavreul (2013) for uncertainty
+and sensitivity assessment is used as the basis for the contribution
+and perturbation analysis. The goal is to systematically identify
+potential sources of uncertainty, while operating under data scar-
+city and limited resources to evaluate the large number of inputs in
+the LCA model. This approach takes advantage of the iterative na-
+ture of LCA and uses the initial results from LCIA. The following
+steps were performed:
+1. The contribution analysis identi ed any process (e.g. WWTP
+operation or biogas collection) that contributed more than 5% to
+any impact category. Then, the key parameters that collectively
+contribute to >90% of the process impacts were identi ed (e.g.
+N2O emission during WWTP operation). The cut-off is arbitrary
+and assigned to constrain the number of parameters so that they
+can be evaluated in a limited time frame.
+2. A perturbation analysis was performed whereby the parameters
+identi ed in step 1 were varied one at a time by 10% to gauge the
+sensitivity of the model output to the parameter input following
+the example of Yoshida et al. (2014a) and Clavreul et al. (2012).
+Parameter sensitivity was then evaluated using a sensitivity
+ratio (SR):
+SR 
+Dresults
+initial result
+Dparameter
+initial parameter
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+541
+
+3. The results were discussed to highlight the sensitive parame-
+ters. The limitation of the assessment is that it does not take into
+account the actual uncertainty of the parameters, only how
+sensitive the model is to these parameters. The bene t of this
+method is that it allows re nement the number of parameters
+needed for further data collection when ultimately conducting
+an uncertainty analysis.
+3. Results and discussion
+3.1. Inventory
+A summary of the life cycle inventory results is presented in
+Table 2. More detail is available in the Supporting Information.
+3.2. Impact assessment
+3.2.1. Scenario A status quo
+In the life cycle impacts of the existing Lynetten WWTP, the two
+impact categories of ecotoxicity (ETox) and marine eutrophication
+(ME) are the highest at 3.1 and 1.0 mPE, respectively (Fig. 2). This is
+primarily due to the discharge of treated ef uent to the sea (Fig. 3).
+Nitrate-nitrogen in the ef uent contribute most to the ME category,
+while the heavy metals in the ef uent (mainly zinc and copper)
+contribute to the ETox category. Global warming at 7.8  102 mPE
+(GWP) is the third highest category. The largest contributor to this
+impact is energy consumption during WWTP operation (67%),
+followed by emissions of N2O to air during treatment (18%), emis-
+sions during incineration (11%), and leakage of methane during
+biogas collection from the anaerobic digester (4%). Biogas com-
+bustion and subsequent use for district heating, results in an offset
+GWP of 4.5%.
+The emissions related to sludge incineration and biogas com-
+bustion are also major contributors to several impact categories,
+such as acidi cation (AC), terrestrial eutrophication (TE), and
+photochemical oxidant formation (POF). Nitrogen oxides (NOx) and
+sulfur-dioxide are the main compounds responsible in these
+Table 2
+LCI sources and results summary. X marks where operation and construction is included. Complete datasets are available in Supporting Information.
+Process
+Scenario
+Operation Construction
+WWTP
+A, B, C
+Site-speci c data for the Lynetten WWTP was based on available public reports from the local utility for the year 2012
+(Lynettef llesskabet I/S, 2012). WWTP infrastructure inventory estimated proportional to ow rate using Foley et al.
+(2010).
+The WWTP is a 59.3 million m3/year facility, including primary and secondary treatment (BNR and phosphorus
+precipitation), anaerobic digestion, and incineration. Energy consumption of 0.51 kWh/m3. Anaerobic digester
+operated with yield of 70% anaerobically degradable carbon to produce biogas with 60% methane. Bulk of biogas sent
+to combustion for heat generation (89%), some lost in leaks (3%), and remainder ared (8%). Assumed lifetime is 30
+years.
+X
+X
+TRENS
+B, C
+Well-established activated sludge models (ASM) were used for process design and optimization (Henze et al., 2000).
+ASM-2d (Flores-Alsina et al., 2012) and ASM-A (Valverde-Perez et al., 2014) models used to simulate growth of
+activated sludge bacteria in the EBP2R process and green micro-algae in the PBR, respectively. Reactor sizing and
+operating of the EBP2R were based on scenario analysis optimization as carried out in Valverde-Perez et al. (2015),
+while the PBR was designed according to Valverde-Perez et al. (2014). Energy usage for EBP2R due to aeration,
+pumping and mixing was evaluated using the Benchmark Simulation Model no. 2 (BSM2) guidelines (Gernaey et al.,
+2014). The PBR construction impacts are represented by calculating the mass of low-density polyethelene (LDPE)
+plastic needed to construct the horizontal reactor panels (Rothermel et al., 2013). PBR operational energy was taken
+from literature for closed, at-panel PBRs (Jorquera et al., 2010).
+Two anaerobic tanks (680 m3 each), one aerobic tank (3150 m3) and a settler were constructed. WWTP infrastructure
+inventory increased by 2.6% proportional to increase in reactor volumes. Energy use of WWTP increases by 0.12 kWh/
+m3 due to EBP2R side-stream aeration, pumping, and mixing. Sludge production increased by 13% due to lower solids
+retention time. Biogas production increased proportionally to sludge production. PBR reactor of 20,000 m3 requiring
+0.015 kg LDPE/m3 and 0.14 kWh/m3 in uent. This system has an 80% phosphorus recovery (combined for the EBP2R
+and PBR) and produces ef uent N-to-P ratio of 17 which is encapsulated in the algae. Assumed lifetime is 15 years.
+X
+X
+Pipeline
+B, C
+Operating energy calculated using HazeneWilliams headloss equation with pipe coef cient of 140. The distribution
+pipeline construction inventory considered in this study is based on Venkatesh et al. (2009).
+25 km pipeline constructed consisting of two parallel pipes 0.579 m in diameter and 30 m elevation increase.
+Infrastructure inventory based on 2292 tons high-density polyethylene (HDPE) required for pipe production and
+diesel fuel consumption during construction (45 L/m). Operating energy consumption of 0.025 kWh/m3. Assumed
+lifetime is 30 years.
+X
+X
+Irrigation
+B
+Existing equipment at farms is assumed used for irrigation, thus no additional infrastructure is included. Energy
+consumption for TRENS water irrigation is assumed comparable to existing groundwater-based system and small
+relative to energy required for long-distance distribution pumping. Nutrient content for fertilizer substitution is
+4.6 mg P/L and 33 mg N/L.
+e
+e
+Pre-in ltration
+treatment
+C
+Pre-treatment and algae harvesting prior to aquifer recharge scenario is based on tertiary treatment data from
+Pasqualino et al. (2010), which includes coagulation/ occulation, ltration, disinfection (UV and chlorination). Energy
+consumption is 0.021 kWh/m3.
+X
+e
+In ltration basin C
+110,000 m2 open basin design based on long-term average in ltration rate of 55 m/yr (K benhavns Energi, 2001)
+with water depth of 0.5 m. Basin construction represented by excavation of 78,320 m3 by hydraulic digger. In ltration
+is by gravity, so energy consumption is assumed negligible compared to other processes. Assumed lifetime is 30 years.
+e
+X
+Fig. 2. Normalized LCIA impact results are dominated by marine eutrophication and
+ecotoxicity.
+Impact
+categories
+abbreviations:
+Global
+warming
+potential
+(GWP),
+terrestrial acidi cation (AC), terrestrial eutrophication (TE), marine eutrophication
+(ME), ecotoxicity (ETox), human toxicity e cancer effects (HTc), human toxicity e non-
+cancer effects (HTnc), particulate matter (PM), resource depletion e fossil (RD).
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+542
+
+categories. Deposition of nitrogen and sulfur from the atmosphere
+contributes to acidi cation. In addition to the acidifying effect, at-
+mospheric deposition of nitrogen also contributes to terrestrial
+eutrophication (Jaworski et al., 1997; Jefferies and Maron, 1997).
+Both NOx and sulfur dioxide contribute to POF since they form
+ozone when exposed to sunlight, which ultimately contributes to
+urban smog (Derwent et al., 1998).
+The results suggest that the status quo model provides a
+reasonable representation of a large, centralized WWTP consistent
+with other wastewater LCA studies. The WWTP electricity con-
+sumption is one of the main contributors to global warming and
+fossil resource depletion as reported in Corominas et al. (2013). Our
+study also nds that discharge to sea (primarily nitrate-nitrogen) is
+another main source of impacts, consistent with results from
+Hospido et al. (2004). All impact categories except one are within
+the same order of magnitude as values obtained in an LCA study of
+the Aved re WWTP in Copenhagen (Yoshida et al., 2014a). The
+exception is for ETox where our result is more than twenty times
+higher than the median value given by Yoshida et al., 2014a. One
+possible reason for the higher ETox value at Lynetten WWTP is that
+it discharged eight times the copper per 1 m3 of in uent than
+Aved re
+WWTP
+(Spildevandscenter
+Aved re
+I/S,
+2012,
+Lynettef llesskabet I/S, 2012).
+3.2.2. Scenario B agricultural fertigation
+Implementation of Scenario B has predicted environmental
+impacts that are on the order of 0e0.2 mPE/m3 less than Scenario A.
+The small changes are partly due to the design of the side-stream
+system. Since only 10% of the in uent water passes through the
+TRENS system, the impacts are dominated by the effects of 90% of
+the ow passing through the WWTP. In the fertigation scenario, the
+main WWTP processes (e.g. discharge to sea and WWTP operation)
+continue to contribute to the impacts (Fig. 3b and c compared to
+Fig. 3a). However, the use-on-land process now plays a large part in
+the toxicity impacts (ETox, HTc, and HTnc). Fig. 4a shows that the
+largest changes, both positive and negative, occur in the ME, ETox,
+HTc and HTnc categories. Overall, the reduced impacts are a result
+of two main processes (Fig. 4b): (1) reduced ow through WWTP
+secondary treatment leading to less N2O emissions, and (2) offset
+mineral fertilizer production. Increases in environmental impacts
+are mainly due to four processes: (1) land application of algae
+suspension, (2) energy consumption of the TRENS system, (3) en-
+ergy consumption of the pipeline, and (4) emissions from increased
+biogas combustion.
+Fig. 3. Percent contribution of individual processes each impact category for the three operating scenarios (a) status quo, (b) fertigation, and (c) aquifer recharge. The life cycle
+phases of construction and operation are shown separately for the WWTP, but combined for other processes (e.g. TRENS, pipeline). Refer to Fig. 2 for abbreviations.
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+543
+
+The largest change from the baseline ( 0.19 mPE, 290%) is in
+the human toxicity, non-cancer effects category (HTnc). This is
+almost entirely a result of heavy metals e primarily zinc and
+mercury e application to soil from the treated ef uent. The other
+toxicity categories (ETox and HTc) are similarly affected by the
+heavy metals. The avoided production and application of mineral
+fertilizer (shown in Fig. 4 as fertilizer substitution) results in some
+savings in toxicity related impacts. This is because mining of
+commercial fertilizer ingredients such as phosphate rock brings
+with it the naturally occurring heavy metals, notably cadmium
+(Wilsenach et al., 2003). These metals then end up in the soil once
+the fertilizer is applied. The avoided mineral fertilizer production is
+also responsible for 1%e24% savings in other impact categories
+(GWP, AC, TE, POF and PM), since there is lower production and
+therefore lower emissions from the associated industrial processes.
+However, land application of the ef uent results in a net toxicity
+increase.
+There is a decrease in marine eutrophication from the baseline
+(9.2E-2 mPE, -9%), which is almost entirely (98%) due to the
+avoided discharge of nitrate-nitrogen to the sea. The TRENS side-
+stream diverted ow that would otherwise have entered the
+recipient water body ( resund). In addition, during the TRENS
+process, soluble nitrogen, which has the potential to contribute to
+surface runoff and leaching, is taken up and stored in algal biomass
+prior to land application. Global warming impacts are reduced by
+15% (1.2E-2 mPE) due to lower emissions of N2O from the WWTP
+since the water diverted to TRENS does not undergo ammonia
+oxidation and denitri cation, the main pathways for N2O produc-
+tion (Kampschreur et al., 2009).
+3.2.3. Scenario C aquifer recharge
+The overall environmental performance of the aquifer recharge
+scenario is similar to that of the baseline, Scenario A (Fig. 5). Sce-
+nario C has reduced WWTP energy consumption, but increased in
+TRENS-related energy consumption resulting in a very minor net
+change in total energy use.
+The ME impact category decreased 8.6E-2 mPE (9%) from the
+baseline as a result of avoided nitrate-nitrogen discharge due to
+diversion of the TRENS sidestream. The category with the largest
+percent increase is HTc (26%, 3.6E-3 mPE) as a result of pre-
+in ltration treatment, speci cally due to production of aluminum
+chlorite (AlCl3) used in the occulation step of the pre-in ltration
+treatment to separate algae from the water. The production phase
+produces emissions of hexavalent chromium, Cr (VI), and arsenic,
+both of which are highly toxic. Niero et al. (2014) noted in a WWTP
+study that AlCl3 production was one of the main processes
+contributing to ecotoxicity. Separation of the algae and water could
+also be achieved through centrifugation or direct ltration,
+although these methods are associated with their own negative
+environmental impacts related to high energy demand (Rothermel
+et al., 2013). All other impact categories show changes of less than
+5% from the baseline. In terms of the processes involved, biogas
+combustion is a major contributor to increases in terrestrial
+eutrophication (TE) and photochemical oxidant formation (POF)
+impact categories. This was a result of increased sludge, and asso-
+ciated
+biogas,
+production
+from
+the
+TRENS
+system,
+thereby
+increasing biogas combustion and combustion-source pollutants
+(e.g. NOx). When compared to Scenario B (fertigation), the lack of
+nutrient recovery for agricultural reuse in this scenario meant
+higher GWP (12%), AC (18%), TE (23%), and POF (12%). However, HTc
+and HTnc were 45% and 290% lower than in the fertigation scenario,
+which shows the difference in diverting the nutrient water sus-
+pension to land, versus just water.
+Scenario C explored a reuse option that was at the extreme end
+for TRENS, since only the water is reused and none of the recovered
+nutrients are reused. Although the environmental bene ts are less
+pronounced than in the fertigation scenario, there are still bene ts
+in terms of the ME impact category. TRENS may be a valid option in
+situations where there is interest in both water reuse and reducing
+nitrate-nitrogen discharge.
+3.2.4. Relative importance of construction versus operation of the
+overall life cycle
+The WWTP related impacts (Fig. 6a) are dominated by the
+operating phase, while the TRENS (Fig. 6b) and pipeline (Fig. 6c)
+impacts were more equally shared between the construction and
+operating life cycle phases. Furthermore, several impacts categories
+(TE, ME, POF, ETox, HTc, and RD) which are dominated by the
+operating phase for the WWTP, are instead dominated by the
+construction phase for TRENS and the pipeline. These differences
+were due to the higher use of plastic materials, speci cally LDPE
+and HDPE plastics, in construction of the PBR and pipeline. In
+addition, the shorter service life of the PBR (15 years compared to
+30 years for the WWTP) meant the construction phase impacts are
+more prominent.
+The results are consistent with reports from Machado et al.
+(2007) and Pasqualino et al. (2010) who considered the WWTP
+construction phase insigni cant compared to the operating phase.
+In studies which reported the opposite, Corominas et al. (2013)
+noted that those were for low-tech, non-energy intensive pro-
+cesses which are not comparable to the Lynetten WWTP. In terms of
+PBR construction, Rothermel et al. (2013) reported that LDPE plastic
+Fig. 4. Environmental performance of fertigation with TRENS relative to baseline scenario (a) and the individual processes that contribute to the change (b). The left plot provides
+the magnitude of change, while the right plot provides the reasons for that change. The percentage contribution plot is scaled such that the sum of all processes is 100%. Refer to
+Fig. 2 for abbreviations.
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+544
+
+production
+contributed
+to
+increased
+eutrophication,
+as
+was
+observed in this study. Silva et al. (2015) also found that the choice
+of construction material (in their case PVC plastic) caused the
+majority of PBR construction impacts. Both sources recommended
+optimizing the use of plastics in PBR construction as a way to
+reduce environmental impacts. It should be noted that this study's
+choice to use LDPE, as a representative material for PBR construc-
+tion, was based on Rothermel et al. (2013), with the expected
+outcome that LDPE production contributes a large portion of the
+overall TRENS impacts. These results illustrate the variability of life
+cycle phase contributions to environmental impacts. The con-
+struction phase was not important when dealing with the WWTP.
+However, this assumption should not be extrapolated to apply to
+other systems such as the PBR and the pipeline, and the con-
+struction phase should always be considered as supported by other
+piped network studies for both drinking water (Sanjuan-Delmas
+et al., 2014) and sewers (Petit-Boix et al., 2014).
+Other
+implications
+for
+technology
+developers
+and
+future
+implementation of TRENS are: i) for the TRENS system, addressing
+both the construction and operating life cycle phases could have
+environmental bene ts since both phases contribute nearly equally
+to the environmental impacts; and ii) in Scenarios B and C, TRENS
+(construction and operation) caused 4.4% and 3.5% of the overall
+environmental impacts. This was for a side-stream TRENS system
+treating 10% of the total in uent wastewater and this contribution
+should increase as the proportion of side-stream ow increases.
+These results are technology speci c. Impact results would change
+if the algae production takes place in an open pond system, which
+has lower energy requirements, but also has drawbacks like high
+land use and lower productivity (Jorquera et al., 2010).
+3.2.5. Contribution analysis
+The contribution analysis shows that 10 of the 14 processes
+included in this study had a greater than 5% contribution to one or
+more impact categories (Fig. 7). In some cases, the process was
+mainly controlled by one parameter, while others were governed
+by multiple parameters. In all, 18 parameters were identi ed that
+govern the important processes (Fig. 8) out of the hundreds of input
+parameters. For example, the process biogas collection is a
+contributor to the GWP impact category and the key parameter
+responsible is the percentage of methane leakage during collection.
+Another example is the WWTP operation process; its impacts to
+GWP are governed by WWTP energy use, FeCl2 use, and NaOH use,
+which collectively contribute to more than 90% of the impacts. The
+implication for technology developers is that, in addition to
+reducing the number of relevant processes and parameters, the
+contribution analysis reveals speci c areas where a system like
+TRENS may be competitive (i.e. FeCl2 use can be reduced by
+switching from chemical precipitation to TRENS for phosphorous
+removal and recovery).
+3.2.6. Perturbation analysis
+The results of the perturbation analysis are plotted as SR for each
+impact category (Fig. 9), where a higher absolute value of SR means
+Fig. 5. Environmental performance of aquifer recharge with TRENS relative to baseline scenario (a) and the individual processes that contribute to the change (b). Refer to Fig. 2 for
+abbreviations.
+Fig. 6. Relative contributions of construction and operation phase impacts in Scenario B: fertigation for (a) the WWTP, (b) TRENS system and (c) pipeline. WWTP impacts are
+dominated by operation energy consumption, while TRENS and pipeline impacts are more in uenced by materials (plastics) used in the construction phase. Refer to Fig. 2 for
+abbreviations.
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+545
+
+that the impacts category is more sensitive to that parameter. The
+results show that some parameters have impacts across a number
+of categories (e.g. WWTP energy use and sludge water content),
+while others are important only to certain categories (e.g. Zn
+discharge to sea in the Etox impact category).
+Nitrogen and phosphorus can both lead to eutrophication of
+waterways e nitrogen primarily affects marine waters while
+phosphorus affects
+freshwater e resulting
+in phytoplankton
+blooms and subsequent depletion of dissolved oxygen necessary
+for other aquatic life (Stoate et al., 2001). When leaching of nitrogen
+to the groundwater was increased from 0 to 10% in the fertigation
+scenario, marine eutrophication increased by 5.5%, with no change
+in all other categories. Increasing phosphorus leaching in the same
+scenario from 0 to 10% increased freshwater eutrophication by 3.5%,
+with less than 0.2% change in all other categories. In reality, the
+concern lies with nitrogen leaching since phosphorus has limited
+mobility in soil (Stoate et al., 2001). These impact changes due to
+leaching are signi cant because algae fertilizer performance is still
+poorly documented (Shilton et al., 2012). The fertigation scenario
+showed a 9% decrease in marine eutrophication under the
+assumption that nutrients are not lost from the farmland. This
+bene t may be lost if nutrient leaching is increased.
+3.3. The use of LCA results to support technology research and
+development
+The results of the base scenario, and the fertigation and aquifer
+recharge scenarios, show how crucial it is to assess new technolo-
+gies in a holistic systems perspective. In the base scenario, most of
+the impacts of the full system are due to the WWTP, except for the
+impact categories ME and ETox. Conversely, in the fertigation sce-
+nario, most of the impacts take place outside the WWTP, with
+direct WWTP impacts playing a role in half of the impact categories.
+If the focus had been limited to the TRENS technology, which is the
+natural focus of technology developers, these impacts would not
+have been recognized.
+For the fertigation scenario, increased toxicity appears to over-
+whelm the environmental bene ts. The impacts on eco- and hu-
+man toxicity were primarily related to heavy metals application to
+soil, and speci cally to zinc and mercury carried in the TRENS
+ef uent. Hospido et al. (2004) also found these metals to be the
+main culprits of increased toxicity when wastewater sludge was
+applied to land. Tangsubkul et al. (2005) noted that increased im-
+pacts on terrestrial environments might be inevitable when
+selecting a technology that optimizes recycling of wastewater nu-
+trients, due to the potentially higher metals loading associated with
+higher nutrient recovery and reuse. The same ndings do not seem
+to apply for the aquifer recharge scenario. During aquifer recharge
+Fig. 7. Contribution of processes to individual impact categories. Any process with a colouredblock indicates it contributes >5% to an impact category.
+Fig. 8. Key parameters identi ed from contribution analysis.
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+546
+
+the metals are partitioned to the WWTP discharge and incinerator
+ashes where the toxic impact is lower. This highlights that the form
+and environmental compartment in which metals are found are
+crucial. Heavy metals in soil (e.g. zinc) are largely immobile as they
+are retained by sorption, thereby reducing the leaching and related
+toxic effects to ground- and freshwater bodies (Anderson and
+Christensen, 1988; Christensen et al., 2000). This suggests that a
+better understanding of fate and toxicity of metals in soil is needed
+in the toxicity impact assessment methods. The LCA thus also
+supports that future research should address the heavy metals
+removal ef ciency and reduction strategies in the TRENS technol-
+ogy, to ensure sustainable wastewater recovery.
+Using the perturbation analysis, and knowledge of how TRENS
+may be applied in full-scale, it is possible to identify parameters
+which are both sensitive (large absolute value of SR) and subject to
+large epistemic uncertainty. Some examples include (Fig. 9): i) N
+fertilizer substitution has a larger absolute SR than P fertilizer
+substitution in multiple impact categories (GWP, AC, TE) and both
+are related to how much mineral fertilizer is offset through appli-
+cation of algae fertilizer. The higher SR for N fertilizer substitution 
+re ects the fact that average nitrogen fertilizer use emits more
+GHGs (fossil based CO2, N2O) than phosphorus fertilizer production
+(Stoate et al., 2001), suggesting that providing a well-de ned N
+substitution value is more critical than for P substitution. The
+substitution value is in uenced by local soil type and application
+methods (Lundin et al., 2000), and is likely to have high uncertainty.
+ii) N2O emissions to air is a sensitive parameter for GWP impact
+category associated with high uncertainty because it is in uenced
+by many factors such as internal recycle rates, aeration ef ciency,
+temperature, in uent nitrogen loading, and sampling challenges
+(Yoshida et al., 2014b). More critically for TRENS, the interest would
+be to characterize emissions during PBR operation since studies
+have shown N2O production during algae cultivation (Guieysse
+et al., 2013). These results identi ed N fertilizer substitution 
+and N2O emissions as priority parameters for the future devel-
+opment of TRENS and similar nutrient recovery processes in terms
+of data collection, laboratory testing, and modeling work.
+Fig. 9. Sensitivity ratios showing the change in model output relative to change in parameter input. Negative SR indicates that model output responds in the opposite direction as
+parameter change (i.e. increase in parameter results in decrease in model output).
+L.L. Fang et al. / Water Research 88 (2016) 538e549
+547
+
+4. Conclusion
+Our study has shown the bene cial use of a mass and substance
+centered LCA model, EASETECH, in the early stage development of a
+new wastewater resource recovery technology. The main conclu-
+sions are:
+ Assessing the true performance potential requires considering
+the consequences of a full-scale system placed into a speci c
+local geographical context, water demand, and existing WWTP
+operations. Relative to the status quo, TRENS was shown to
+reduce impacts by up to 15% for global warming and 9% for
+marine eutrophication. High
+environmental impacts
+were
+associated with eco- and human toxicity categories as a result of
+the selected end uses of TRENS products, emphasizing the need
+for system expansion beyond the water and resource recovery
+technology itself.
+ TRENS primarily improves WWTP performance by reducing
+nitrogen species in the ef uent and direct nitrogen N2O emis-
+sions in the nitri cation-denitri cation process.
+ The TRENS system bene ts are restricted by the limited need for
+freshwater substitution and fertilizer needs in the model area,
+but would increase proportionally with increased demand for
+resource substitution.
+ The LCA identi es both construction and operation life cycle
+impacts as areas for improvement, particularly in PBR design,
+contrary to the operation life cycle focus assumed for conven-
+tional WWTPs.
+ Finally, the LCA results provided feedback to technology de-
+velopers and speci cally TRENS developers by highlighting
+subcomponents that warrant better characterization (e.g. N2O
+emissions during PBR operation) or evaluation of technology
+options (e.g. algae cultivation using closed PBR or open ponds).
+Ongoing development is focused on laboratory studies and
+modeling of the biological treatment system. However, decision-
+making and implementation bene ts from a broader perspective
+even in the initial stages of development.<|im_end|>
+<|im_start|>assistant
+
+
+Model output:
+Y

@@ -1,0 +1,35 @@
+Zero-Shot LCA Classification Benchmark With Methodology Section
+====================================================================
+Generated: 2026-04-05 23:48:27
+Dataset: data/uselca1.csv
+Rows fetched with methodology section: 399
+Models attempted: 4
+Bootstrap sensitivity: 300 resamples (seed=42)
+Inference variants: baseline vs baseline+methodology
+
+Per-model summary
+--------------------------------------------------------------------
+Model                                Status                BaseCov  MethCov  PairCov   BaseF1   MethF1   TokDelta  TimeDelta   PairRows
+---------------------------------------------------------------------------------------------------------------------------------------
+Qwen/Qwen3.5-9B                      ok                     1.0000   1.0000   1.0000   0.9605   0.9587   443.0551    -0.0830    399/399
+google/gemma-4-26B-A4B-it            ok                     1.0000   1.0000   1.0000   0.9568   0.9521   456.7669     0.1212    399/399
+Qwen/Qwen2.5-7B-Instruct             ok                     1.0000   1.0000   1.0000   0.9663   0.9565   456.5263     0.1144    399/399
+google/gemma-3-12b-it                ok                     1.0000   1.0000   1.0000   0.9337   0.9366   463.7218     0.2509    399/399
+
+Metric Std (Sensitivity)
+--------------------------------------------------------------------
+Model                                 BaseF1Std  MethF1Std BaseAccStd MethAccStd
+--------------------------------------------------------------------------------
+Qwen/Qwen3.5-9B                          0.0074     0.0078     0.0113     0.0118
+google/gemma-4-26B-A4B-it                0.0078     0.0086     0.0122     0.0132
+Qwen/Qwen2.5-7B-Instruct                 0.0075     0.0084     0.0115     0.0126
+google/gemma-3-12b-it                    0.0102     0.0100     0.0161     0.0156
+
+Notes
+- The fetched dataset only includes papers where Elsevier XML retrieval succeeded and a non-empty methodology section was found.
+- Baseline uses title + abstract only.
+- Methods uses title + abstract + extracted methodology section only.
+- Token delta is the mean increase in input tokens after adding methodology.
+- Time delta is the mean per-row generation time increase after adding methodology.
+- GPU memory deltas are tracked per-row when CUDA is available.
+- Row-level results are saved in data/zero_shot_classification_with_methods_rows.csv.

@@ -1,0 +1,39 @@
+Model: Qwen/Qwen3.5-9B
+DOI: 10.1016/j.envres.2023.116545
+Variant: methods
+================================================================================
+<|im_start|>system
+You are a helpful research assistant with 20 years of experience in environmental science.
+Classify whether an article contains methods or concepts of Life Cycle Assessment (LCA), using only the provided paper text.
+
+Definitions:
+1. Life Cycle Assessment (LCA):
+- ISO: Compilation and evaluation of inputs, outputs and potential environmental impacts of a product system throughout its life cycle.
+- SETAC: Evaluation of environmental burdens across the life cycle, from raw material extraction to disposal.
+
+Important notes:
+- The article must include LCA methods or concepts consistent with these definitions.
+- Life Cycle Costing (LCC) and Social Life Cycle Assessment (S-LCA) are not counted as LCA for this task.
+
+Output exactly one label:
+- 1 = applies LCA
+- 0 = does not apply LCA
+Do not output anything else.<|im_end|>
+<|im_start|>user
+Title: Life cycle assessment of sequential microbial-based anaerobic-aerobic reactor technology developed onsite for treating textile effluent
+Abstract: Although biological treatment of textile effluent is a preferred option for industries avoiding toxic chemical sludge production and disposal, requirement of several extra pre-treatment units like neutralization, cooling systems or additives, results in higher operational cost. In the present study, a pilot scale sequential microbial based anaerobic-aerobic reactor technology (SMAART) was developed and operated for the treatment of real textile effluent in the industrial premises in continuous mode for 180 d. The results showed an average-95% decolourization along with-92% reduction in the chemical oxygen demand establishing the resilience against fluctuations in the inlet parameters and climate conditions. Moreover, the pH of treated effluent was also reduced from alkaline range (-11.05) to neutral range (-7.76) along with turbidity reduction from-44.16 NTU to-0.14 NTU. A comparative life cycle assessment (LCA) of SMAART with the conventional activated sludge process (ASP) showed that ASP caused 41.5% more negative impacts on environment than SMAART. Besides, ASP had 46.15% more negative impact on human health, followed by 42.85% more negative impact on ecosystem quality as compared to SMAART. This was attributed to less electricity consumption, absence of pretreatment units (cooling and neutralization) and less volume of sludge generation (-50%) while using SMAART. Hence, integration of SMAART within the industrial effluent treatment plant is recommended to achieve a minimum waste discharge system in pursuit of sustainability.
+Methodology: ## Material and methods
+In the present study, a leading textile industry situated in the central region of India was selected to study the performance of SMAART technology. The industry houses several operational units such as desizing, scouring, bleaching, mercerization, dyeing and washing units. Dyeing and washing units discharge about 65%–70% of the total textile effluent from this industry. This effluent is highly coloured and has been termed as “coloured effluent” due to the presence of multiple dyes (majorly reactive dyes along with dispersed and vat dyes). It also contains high concentration of salts, auxiliaries and chemicals. The combined effluent discharged from desizing, scouring and bleaching has been designated as “non-coloured effluent” that comprises about 20–25% of the total textile effluent. Non-coloured effluent contains high concentrations of salts, starch residues, enzymes and chemicals. Both coloured and non-coloured effluent have high pH (9.5–13) and temperature (55°C–65 °C) and are treated together using a conventional ASP with a capacity of 6000 KLD (Kiloliters of effluent per day).
+
+However, the generated effluent has a high temperature (∼60 °C) and alkaline pH (10–12) that hinder the growth of biomass in the ASP, resulting in lower treatment efficiency. Hence, the effluent's temperature and pH are adjusted to the desired values before transferring effluent into the aerobic unit. The cooling tower is used to reduce the temperature from 55-60 °C to 37–40 °C, followed by neutralization using sulphuric acid. Both these pre-treatment processes cause an increase in the operational cost. Dissolved oxygen (DO) level in the aeration tank is generally maintained at 2 ± 0.2 mg/L by air sparging. After 72 h retention in the aerobic unit, the treated effluent is transferred to the clarifier for sludge removal. The sludge generated from the system is hazardous due to the presence of coloured compounds. The treated
+Classification (output only 1 or 0):<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+
+Model output (methods variant):
+1
+Parsed label: 1

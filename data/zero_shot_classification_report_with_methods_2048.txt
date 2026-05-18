@@ -1,0 +1,29 @@
+Zero-Shot LCA Classification Benchmark With Methodology Section
+====================================================================
+Generated: 2026-04-05 06:43:55
+Dataset: data/uselca1.csv
+Rows fetched with methodology section: 399
+Models attempted: 1
+Bootstrap sensitivity: 300 resamples (seed=42)
+Inference variants: baseline vs baseline+methodology
+
+Per-model summary
+--------------------------------------------------------------------
+Model                                Status                BaseCov  MethCov  PairCov   BaseF1   MethF1   TokDelta  TimeDelta   PairRows
+---------------------------------------------------------------------------------------------------------------------------------------
+Qwen/Qwen2.5-7B-Instruct             ok                     1.0000   1.0000   1.0000   0.9663   0.9465  1429.8095     0.3897    399/399
+
+Metric Std (Sensitivity)
+--------------------------------------------------------------------
+Model                                 BaseF1Std  MethF1Std BaseAccStd MethAccStd
+--------------------------------------------------------------------------------
+Qwen/Qwen2.5-7B-Instruct                 0.0075     0.0093     0.0115     0.0142
+
+Notes
+- The fetched dataset only includes papers where Elsevier XML retrieval succeeded and a non-empty methodology section was found.
+- Baseline uses title + abstract only.
+- Methods uses title + abstract + extracted methodology section only.
+- Token delta is the mean increase in input tokens after adding methodology.
+- Time delta is the mean per-row generation time increase after adding methodology.
+- GPU memory deltas are tracked per-row when CUDA is available.
+- Row-level results are saved in data/zero_shot_classification_with_methods_rows.csv.
