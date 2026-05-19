@@ -41,10 +41,11 @@ class OllamaBackend:
         payload = {
             "model": self.model,
             "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT + "\n/no_think"},
+                {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": build_user_message(title, abstract)},
             ],
             "stream": False,
+            "think": False,
             "options": {
                 "num_predict": 10,
                 "temperature": 0.0,
