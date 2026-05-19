@@ -1,20 +1,16 @@
 """
 screening/screen.py
 -------------------
-Main CLI entry point for LCA paper screening.
-Auto-detects backend: CUDA GPU → HuggingFace, otherwise → Ollama.
+Screen papers for LCA relevance using Ollama.
 
 Usage:
     python -m screening.screen --input List_1.xls --output screening/results/List_1_screened.csv
     python -m screening.screen --input List_2.xls --output screening/results/List_2_screened.csv
-    python -m screening.screen --input List_1.xls --output screening/results/List_1_screened.csv --backend ollama
-    python -m screening.screen --input data.csv --output screening/results/data_screened.csv --backend hf --hf-model Qwen/Qwen2.5-7B-Instruct
 
 Options:
-    --backend       Force backend: "ollama" or "hf" (default: auto-detect)
     --model         Ollama model tag (default: qwen3:8b-q8_0)
-    --hf-model      HuggingFace model name (default: Qwen/Qwen2.5-7B-Instruct)
-    --hf-quant      HuggingFace quantization: none, 8bit, 16bit (default: none)
+    --title-col     Column name for article title (default: Article Title)
+    --abstract-col  Column name for abstract (default: Abstract)
     --resume        Resume from where a previous run left off
 """
 
@@ -23,6 +19,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+from screening.ollama_backend import OllamaBackend
 
 
 def load_input(path: str, title_col: str, abstract_col: str) -> pd.DataFrame:
@@ -43,43 +40,6 @@ def load_input(path: str, title_col: str, abstract_col: str) -> pd.DataFrame:
         raise ValueError(f"Column '{abstract_col}' not found. Available: {list(df.columns)}")
 
     return df
-
-
-def select_backend(args):
-    """Auto-detect or manually select backend."""
-    if args.backend == "hf":
-        from screening.hf_backend import HuggingFaceBackend
-        return HuggingFaceBackend(model_name=args.hf_model, quantization=args.hf_quant)
-
-    if args.backend == "ollama":
-        from screening.ollama_backend import OllamaBackend
-        backend = OllamaBackend(model=args.model)
-        if not backend.is_available():
-            print(f"ERROR: Ollama not running or model '{args.model}' not found.")
-            print("  Start Ollama:  ollama serve")
-            print(f"  Pull model:    ollama pull {args.model}")
-            sys.exit(1)
-        return backend
-
-    # Auto-detect
-    try:
-        import torch
-        if torch.cuda.is_available():
-            print("CUDA detected → using HuggingFace backend")
-            from screening.hf_backend import HuggingFaceBackend
-            return HuggingFaceBackend(model_name=args.hf_model, quantization=args.hf_quant)
-    except ImportError:
-        pass
-
-    print("No CUDA → using Ollama backend")
-    from screening.ollama_backend import OllamaBackend
-    backend = OllamaBackend(model=args.model)
-    if not backend.is_available():
-        print(f"ERROR: Ollama not running or model '{args.model}' not found.")
-        print("  Start Ollama:  ollama serve")
-        print(f"  Pull model:    ollama pull {args.model}")
-        sys.exit(1)
-    return backend
 
 
 def save_progress(df: pd.DataFrame, results: list, output_path: str):
@@ -103,12 +63,7 @@ def main():
     parser = argparse.ArgumentParser(description="Screen papers for LCA relevance")
     parser.add_argument("--input", required=True, help="Input file (.xls, .xlsx, .csv)")
     parser.add_argument("--output", required=True, help="Output CSV path")
-    parser.add_argument("--backend", choices=["ollama", "hf", "auto"], default="auto",
-                        help="Inference backend (default: auto-detect)")
     parser.add_argument("--model", default="qwen3:8b-q8_0", help="Ollama model tag")
-    parser.add_argument("--hf-model", default="Qwen/Qwen2.5-7B-Instruct", help="HuggingFace model")
-    parser.add_argument("--hf-quant", choices=["none", "8bit", "16bit"], default="none",
-                        help="HuggingFace quantization level")
     parser.add_argument("--title-col", default="Article Title", help="Title column name")
     parser.add_argument("--abstract-col", default="Abstract", help="Abstract column name")
     parser.add_argument("--resume", action="store_true", help="Resume from existing output")
@@ -129,9 +84,15 @@ def main():
         start_idx = len(existing)
         print(f"Resuming from row {start_idx} ({start_idx}/{total} already done)")
 
-    # Select backend
-    backend = select_backend(args)
-    print(f"Backend: {backend.__class__.__name__}")
+    # Init backend
+    backend = OllamaBackend(model=args.model)
+    if not backend.is_available():
+        print(f"ERROR: Ollama not running or model '{args.model}' not found.")
+        print(f"  Start Ollama:  ollama serve")
+        print(f"  Pull model:    ollama pull {args.model}")
+        sys.exit(1)
+
+    print(f"Model: {args.model}")
     print(f"{'='*60}")
 
     # Run classification

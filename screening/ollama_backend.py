@@ -2,7 +2,7 @@
 screening/ollama_backend.py
 ---------------------------
 Inference backend using Ollama's local HTTP API.
-Designed for Apple Silicon Macs (no CUDA required).
+Works on both Mac (Apple Silicon) and Windows (NVIDIA GPU).
 
 Usage:
     from screening.ollama_backend import OllamaBackend
@@ -31,7 +31,6 @@ class OllamaBackend:
             resp = requests.get(f"{OLLAMA_URL}/api/tags", timeout=5)
             resp.raise_for_status()
             models = [m["name"] for m in resp.json().get("models", [])]
-            # Ollama tags can include :latest, so check prefix
             return any(self.model in m for m in models)
         except Exception:
             return False
