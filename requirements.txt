@@ -1,0 +1,11 @@
+# Core — needed on both machines
+pandas>=2.0
+requests>=2.28
+xlrd>=2.0           # for reading .xls files
+openpyxl>=3.1       # for reading .xlsx files
+
+# HuggingFace backend — only needed on the office Windows machine (CUDA GPU)
+# Uncomment these when setting up the office machine:
+# torch>=2.0
+# transformers>=4.40
+# bitsandbytes>=0.43  # for 8-bit quantization
