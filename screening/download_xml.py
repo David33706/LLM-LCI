@@ -46,11 +46,23 @@ def main():
     parser.add_argument("--output-dir", default="elsevier_xml", help="Directory to save XML files")
     parser.add_argument("--delay", type=float, default=1.0, help="Seconds between API requests")
     parser.add_argument("--max-retries", type=int, default=3, help="Max retries per DOI")
+    parser.add_argument("--all-publishers", action="store_true",
+                        help="Try all DOIs, not just Elsevier (10.1016)")
     args = parser.parse_args()
 
     print("Collecting DOIs from screened results...")
-    dois = collect_dois(SCREENED_FILES)
-    print(f"Total unique DOIs to download: {len(dois)}\n")
+    all_dois = collect_dois(SCREENED_FILES)
+    print(f"Total unique DOIs: {len(all_dois)}")
+
+    if not args.all_publishers:
+        dois = [d for d in all_dois if d.startswith("10.1016/")]
+        skipped = len(all_dois) - len(dois)
+        print(f"Elsevier DOIs (10.1016): {len(dois)}")
+        print(f"Non-Elsevier skipped: {skipped}")
+    else:
+        dois = all_dois
+
+    print()
 
     if not dois:
         print("No DOIs found. Run the screening first.")
