@@ -27,3 +27,4 @@ criteria_classification/test.ipynb
 .vscode/
 .tmp_single_pdf/
 Miniforge3-MacOSX-arm64.sh
+tables_xml/

@@ -1,12 +1,12 @@
 # Core — needed on both machines
 pandas>=2.0
 requests>=2.28
-xlrd>=2.0           # for reading .xls files
-openpyxl>=3.1       # for reading .xlsx files
+xlrd>=2.0
+openpyxl>=3.1
+tabulate>=0.9
 
 # Elsevier XML download
 python-dotenv>=1.0
 beautifulsoup4>=4.12
 lxml>=5.0
-tqdm>=4.65tabulate
-tabulate
+tqdm>=4.65
