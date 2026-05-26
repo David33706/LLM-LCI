@@ -8,4 +8,5 @@ openpyxl>=3.1       # for reading .xlsx files
 python-dotenv>=1.0
 beautifulsoup4>=4.12
 lxml>=5.0
-tqdm>=4.65
+tqdm>=4.65tabulate
+tabulate
