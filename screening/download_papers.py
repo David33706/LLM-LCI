@@ -59,12 +59,15 @@ def try_xml(doi: str, timeout: int = 30) -> requests.Response | None:
 
 
 def try_pdf(doi: str, timeout: int = 60) -> requests.Response | None:
-    """Download PDF (works for both OA and non-OA with CCL key)."""
+    """Download PDF, reject single-page cover pages."""
     url = f"{BASE_URL}/{doi}?APIKey={API_KEY}"
     try:
         r = requests.get(url, headers={"Accept": "application/pdf"}, timeout=timeout)
         if r.status_code == 200 and len(r.content) > 1000:
-            return r
+            # Reject 1-page PDFs (cover/abstract pages, not full papers)
+            pages = r.content.count(b"/Type /Page") - r.content.count(b"/Type /Pages")
+            if pages > 1:
+                return r
     except requests.RequestException:
         pass
     return None
