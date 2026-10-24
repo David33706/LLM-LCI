@@ -1,0 +1,26 @@
+# GPU machines (office RTX, DKUCC cluster) — torch CUDA build notes.
+#
+# The base install is the same:
+#     pip install -r requirements.txt
+#
+# BUT: sentence-transformers pulls `torch` UNPINNED, so on Linux pip defaults
+# to the newest CUDA wheel — currently a CUDA-13 build (~3 GB of nvidia-* libs).
+# That build does NOT match clusters on CUDA 12.6 and is oversized for CPU-only
+# retrieval. After the base install, replace torch with the wheel matching the
+# machine's CUDA:
+#
+#   # DKUCC cluster (CUDA 12.6):
+#   pip uninstall -y torch
+#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+#
+#   # (Pick the cu### that matches `module load cuda/...` on the target machine.)
+#
+# Verify the build is correct (must print 12.6, NOT 13.x):
+#   python -c "import torch; print(torch.__version__, '| cuda', torch.version.cuda)"
+#   # expect: 2.x.x+cu126 | cuda 12.6
+#
+# Note: torch.cuda.is_available() reads False on a login node (no GPU) — that is
+# correct. It only reads True inside a GPU job (srun/sbatch with --gres=gpu:1).
+#
+# Deferred / PDF path only — not needed for the current XML pipeline:
+# docling>=2.0

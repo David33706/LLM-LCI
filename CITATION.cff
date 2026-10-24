@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "LLM-LCI: a locate-and-quote assistant for life-cycle inventory assumptions in LCA papers"
+abstract: >-
+  Research code from the 2026 Duke Kunshan University Summer Research Scholars
+  program. Given a question about a life-cycle inventory assumption, it returns
+  the study, the section or table that states the assumption, and a verbatim
+  quote. Hybrid dense and BM25 retrieval finds candidate papers; a long-context
+  LLM reads one paper per call; the section is resolved in Python from the quote.
+authors:
+  - family-names: Tojiyev
+    given-names: Dovudxon
+    affiliation: Duke Kunshan University
+date-released: "2026-10-25"
+license: MIT
+repository-code: "https://github.com/David33706/LLM-LCI"
+keywords:
+  - life cycle assessment
+  - life cycle inventory
+  - retrieval-augmented generation
+  - large language models
+  - information retrieval
+  - hybrid search
+  - BM25

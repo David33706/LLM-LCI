@@ -1,0 +1,53 @@
+# Data / indexes (too large for git; licensed full text and derived indexes)
+# No trailing slash on these four, so a symlink with the same name is ignored too.
+elsevier_xml
+elsevier_pdf/
+chroma_db
+bm25_index
+tables_xml
+# WoS exports (licensed data with abstracts): never commit
+screening/results/
+logs/
+*.zip
+
+# Private eval workbooks and evidence (verbatim paper text): never commit
+eval/*.xlsx
+docs/artifacts/
+
+# Eval outputs
+eval_runs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Environment (API keys)
+.env
+.env.*
+!.env.example
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+.tmp_single_pdf/
+.tmp_single_output/
+
+# Local installers
+Miniforge3-MacOSX-arm64.sh
+
+# Licensed XML staging left by a failed ingest/add_papers.py run
+.add_papers_*/
+
+# Legacy tables track writes licensed content here
+debug_prompt.txt
+tables_exports/

@@ -1,0 +1,29 @@
+# Direct dependencies of the pipeline (Mac env + cluster pipeline venv).
+#
+# THIS FILE = what the project ASKS FOR: direct deps only, loose bounds, grouped
+#   by purpose. Install from here when building on a NEW platform, then create a
+#   lock from the result.
+# requirements-*.lock = what ACTUALLY WORKED: pip freeze, exact pins, including
+#   transitive deps. Install from a lock to reproduce the frozen numbers.
+#   Locks are per-machine-class (mac / cluster / cluster-vllm) and not portable.
+#
+# The vLLM server runs in a SEPARATE venv (/work/$USER/venv-vllm) and is declared
+# only by requirements-cluster-vllm.lock — it shares nothing with this file.
+
+# Core
+pandas>=2.0
+requests>=2.28
+xlrd>=2.0
+openpyxl>=3.1
+tabulate>=0.9
+
+# Elsevier XML download
+python-dotenv>=1.0
+beautifulsoup4>=4.12
+lxml>=5.0
+tqdm>=4.65
+
+# RAG engine (sentence-transformers pulls in torch automatically)
+sentence-transformers>=2.2
+chromadb>=0.4
+bm25s>=0.2
